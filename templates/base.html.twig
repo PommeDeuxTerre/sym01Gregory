@@ -12,6 +12,16 @@
         {% endblock %}
     </head>
     <body>
+        {% block nav %}
+        <nav>
+            <a href="{{ path('homepage') }}">homepage</a>
+            <a href="{{ path('page') }}">page 1</a>
+            <a href="{{ path('page', {'id': 2}) }}">page 2</a>
+            <a href="{{ path('page', {'id': 3}) }}">page 3</a>
+            <a href="{{ path('error') }}">erreur !</a>
+            <a href="{{ path('contact') }}">me contacter</a>
+        </nav>
+        {% endblock %}
         {% block body %}{% endblock %}
     </body>
 </html>
