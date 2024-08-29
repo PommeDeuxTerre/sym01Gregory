@@ -36,8 +36,10 @@ class PublicController extends AbstractController
     )]
     public function error(): Response
     {
-        return $this->render('public/error.html.twig', [
+        $response = $this->render('public/error.html.twig', [
         ]);
+        $response->setStatusCode(418);
+        return $response;
     }
 
     #[Route(
